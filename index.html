@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Card</title>
+    <!-- Google Font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <style>* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background-color: #00328B;
+      font-size: 13px;
+    }
+    .container
+    {
+      margin: 0 auto;
+    }
+    .card {
+      width: 50vw;
+      height: 70vh;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      -webkit-perspective: 1200px;
+      perspective: 1200px;
+      transition: 1s;
+    }
+    .card:hover {
+      transform: rotate(-5deg);
+    }
+    .card:hover .outside {
+      transform: rotateY(-150deg);
+    }
+    .outside,
+    .inside {
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      left: 50.1%;
+    }
+    .inside {
+      background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+      line-height: 3;
+      padding: 0 20px;
+      left: 50%;
+    }
+    .outside {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      z-index: 1;
+      transform-origin: left;
+      transition: 2s;
+      cursor: pointer;
+    }
+    .front,
+    .back {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform: rotateX(0deg);
+      padding: 20px;
+    }
+    .front {
+      background-color: #ffffff;
+    }
+    .back {
+      transform: rotateY(180deg);
+      background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+    }
+    .cake {
+      width: 100%;
+      position: absolute;
+      bottom: 30px;
+    }
+    .outside p {
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-top: 30px;
+      text-align: center;
+      letter-spacing: 6px;
+      color: #000046;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="outside">
+          <div class="front">
+            <p>Chúc mừng sinh nhật</p>
+          </div>
+          <div class="back">
+            <img src="/334571207_125471206986903_7195873480503933862_n.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+        <div class="inside">
+          <span> Dear Sếp !</span>
+          <p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
