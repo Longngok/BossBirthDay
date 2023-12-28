@@ -37,10 +37,11 @@
       perspective: 1200px;
       transition: 1s;
     }
-    .card:hover {
+    .card.active {
       transform: rotate(-5deg);
     }
-    .card:hover .outside {
+
+    .card .outside.active {
       transform: rotateY(-150deg);
     }
     .outside,
@@ -100,7 +101,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="card">
+      <div class="card" onclick="toggleEffects()">
         <div class="outside">
           <div class="front">
             <p class="text">Happy Birthday!</p>
@@ -125,5 +126,15 @@
         </div>
       </div>
     </div>
+    <script>
+      function toggleEffects() {
+      const card = document.querySelector('.card');
+      const outside = document.querySelector('.outside');
+
+      // Thêm hoặc xóa class 'active' khi click vào .card
+      card.classList.toggle('active');
+      outside.classList.toggle('active');
+    }
+    </script>
   </body>
 </html>
